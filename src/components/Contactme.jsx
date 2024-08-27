@@ -88,14 +88,14 @@ function Contactme() {
             </div>
 
             <div className="icon bg-lightdark rounded-2 mx-3 hover-effect mt-3" style={{ width: '100px', height: '50px' }}>
-              <a href="https:linkedin.com/oziomaleen" className='text-decoration-none text-light' target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/oziomaleen" className='text-decoration-none text-light' target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-linkedin-in"></i>
                 <p className=''>Linkedin</p>
               </a>
             </div>
 
             <div className="icon bg-lightdark rounded-2 mx-3 hover-effect mt-3 " style={{ width: '100px', height: '50px' }}>
-              <a href="https:twitter.com/oziomaleen" className='text-decoration-none text-light' target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/oziomaleen" className='text-decoration-none text-light' target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-x-twitter"></i>
                 <p className=''>Twitter</p>
               </a>
@@ -115,50 +115,50 @@ function Contactme() {
 
 
       </div>
-      <form action="" className='text-center mb-5 ' onSubmit={handleSubmit}>
-        <div className="d-flex" style={{ justifyContent: 'center' }}>
-          <div className="flex-glow-1 me-2">
-            <input type="text" size="30" name="name" value={formData.name} placeholder='Enter your name' className={`form-control rounded-2 px-2 py-3 border-light text-light ${errors.name && 'is-invalid'}`} style={{ border: '2px solid white', backgroundColor: '#0d1f48' }} onChange={handleChange} />
-            {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+      <form action="" className='text-center mb-5 custom-width2' onSubmit={handleSubmit}>
+  <div className="row justify-content-center">
+    <div className="col-12 col-md-5 mb-3">
+      <input type="text" name="name" value={formData.name} placeholder='Enter your name' 
+             className={`form-control rounded-2 px-2 py-3 border-light text-light ${errors.name && 'is-invalid'}`} 
+             style={{ backgroundColor: '#0d1f48' }} onChange={handleChange} />
+      {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+    </div>
+    <div className="col-12 col-md-5 mb-3">
+      <input type="email" name="email" value={formData.email} placeholder='Enter your email' 
+             className={`form-control rounded-2 px-2 py-3 border-light text-light ${errors.email && 'is-invalid'}`} 
+             style={{ backgroundColor: '#0d1f48' }} onChange={handleChange} />
+      {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+    </div>
+  </div>
+  <div className="row justify-content-center">
+    <div className="col-12 col-md-10">
+      <textarea
+        name="message"
+        value={formData.message}
+        placeholder="Enter your message"
+        className={`form-control rounded-2 border-light text-light ${errors.message && 'is-invalid'}`}
+        style={{ backgroundColor: '#0d1f48' }}
+        rows="10"
+        onChange={handleChange}>
+      </textarea>
+      {errors.message && <div className="invalid-feedback">{errors.message}</div>}
+      
+      <div className="mt-3">
+        <ReCAPTCHA
+          sitekey="6LfZtiwqAAAAADpGIPdTXRK20eNzSwOvLSoL52Kf"
+          onChange={onCaptchaChange} />
+        {errors.captcha && <div className="invalid-feedback d-block">{errors.captcha}</div>}
+      </div>
+    </div>
+  </div>
+  <div className="d-flex justify-content-center">
+    <button className='btn btn-light rounded-pill border-white text-light p-3 mt-3 hover-effect' 
+            style={{ border: '2px solid white', backgroundColor: 'transparent' }}>
+      Submit now <i className="fa-solid fa-arrow-up-right-from-square text-light px-2"></i>
+    </button>
+  </div>
+</form>
 
-          </div>
-          <div className="flex-glow-1 ms-2">
-            <input type="email" size="30" name="email" value={formData.email} placeholder='Enter your email' className={`form-control rounded-2 px-2 py-3 border-light text-light ${errors.email && 'is-invalid'}`} style={{ border: '2px solid white', backgroundColor: '#0d1f48' }} onChange={handleChange} />
-            {errors.email && <div className="invalid-feedback">{errors.email}</div>}
-
-          </div>
-        </div>
-        <div className="d-flex mt-3" style={{ justifyContent: 'center' }}>
-          <div>
-            <textarea
-              name="message"
-              value={formData.message}
-              placeholder="Enter your message"
-              className={`form-control rounded-2 border-light text-light ${errors.message && 'is-invalid'}`}
-              style={{ border: '2px solid white', backgroundColor: '#0d1f48', width: 'auto' }}
-              rows="10"
-              cols="69"
-              onChange={handleChange}>
-            </textarea>
-            {errors.message && <div className="invalid-feedback">{errors.message}</div>}
-
-            <div className="mt-3">
-              <ReCAPTCHA
-                sitekey="6LfZtiwqAAAAADpGIPdTXRK20eNzSwOvLSoL52Kf"
-                onChange={onCaptchaChange} />
-              {errors.captcha && <div className="invalid-feedback d-block">{errors.captcha}</div>}
-            </div>
-
-          </div>
-        </div>
-
-
-        <div className="d-flex justify-content-center">
-
-          <button className='btn btn-light rounded-pill border-white text-light p-3 mt-3 hover-effect' style={{ border: '2px solid white', backgroundColor: 'transparent' }}>Submit now <i className="fa-solid fa-arrow-up-right-from-square text-light px-2 "></i></button>
-        </div>
-
-      </form>
     </>
   );
 }
