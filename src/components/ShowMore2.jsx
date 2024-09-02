@@ -63,7 +63,7 @@ const ShowMore = () => {
     { imgSrc: Project2, title: 'Agriculture-site', description: 'Full-stack project', link: 'https://kyrianagroventures.com/' },
     { imgSrc: Project3, title: 'Cargo-site', description: 'Frontend project', link: 'https://cargo-site.netlify.app' },
     { imgSrc: Project4, title: 'Portfolio-site', description: 'Full-stack', link: '#' },
-    { imgSrc: Project5, title: 'Cafe-site', description: 'Frontend project', link: '#' },
+    { imgSrc: Project5, title: 'Cafe-site', description: 'Frontend project', link: 'https://e-commerce-ozy.netlify.app/' },
   ];
 
   return (
