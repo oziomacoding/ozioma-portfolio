@@ -1,7 +1,7 @@
 import React from 'react'
 import Typewriter from 'typewriter-effect';
 import Halfozioma from '../assets/ozioma2.jpg'
-import Resume from '../assets/resume2.pdf'; // Adjust the path as needed
+import Resume from '../assets/PAULEEN_OZIOMA_RESUME.pdf'; // Adjust the path as needed
 import AboutMe from './Aboutme';
 import Services from './Services';
 import MyWork from './Mywork';
