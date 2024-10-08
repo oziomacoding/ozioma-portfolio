@@ -29,12 +29,12 @@ function Homepage() {
             />
           </h1>
           <p className='custom-width'>I am a full-stack developer from Nigeria.</p>
-          <div className=" d-flex justify-content-center pt-4">
-            <a href="#contact-me" className="text-decoration-none">
-              <button type="button" className="btn text-dark rounded-pill btn-light custom-mixed-color p-3 mx-2"> Contact me<i className="fa-solid fa-arrow-right-from-bracket text-dark px-2"></i></button>
+          <div className=" d-flex justify-content-center pt-4 ">
+            <a href="https://github.com/oziomacoding" target="_blank" rel="noopener noreferrer" className="text-decoration-none">
+              <button type="button" className="btn text-dark rounded-pill btn-light custom-mixed-color p-3 mx-2">  <strong>Github</strong><i className="fa-solid fa-arrow-right-from-bracket text-dark px-2"></i></button>
             </a>
             <a href={Resume} download className="btn text-dark rounded-pill btn-light p-3 mx-2">
-              My resume <i className="fa-solid fa-arrow-down text-dark px-1"></i>
+            <strong>My resume</strong> <i className="fa-solid fa-arrow-down text-dark px-1"></i>
             </a>
           </div>
 
